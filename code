@@ -3,9 +3,9 @@ def load_image(name, colorkey = None):
        fullname = os.path.join('data', name)
        try:
            image = pygame.image.load(fullname)
-       except (pygame.error,  message):
+       except (pygame.error,  message): # this line is not sure because i add ()
            print ('Cannot load image:', name)
-           raise (SystemExit,  message)
+           raise (SystemExit,  message) # this line is not sure because i add ()
        image = image.convert()
        # set the colorkey to be the color of the top left pixel
        if colorkey is not None:
